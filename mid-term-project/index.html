@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adventure Game</title>
+    <h2>Misan Paul Etchie</h2>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Choose Your Own Adventure Game</h1>
+    <div id="story">Welcome to the adventure!</div>
+    <div id="choices"></div>
+    <img id="story-image" src="images/garden-end-escape.jpg" alt="Story Image">
+    <button id="game-button" onclick="startGame()">Start Game</button>
+
+    <footer>
+        <p>Last updated: 
+            <span id="lastModified"></span>
+        </p>
+    </footer>
+    <script type="text/javascript">
+         var x = document.lastModified;
+         document.getElementById('lastModified').textContent = x;
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>

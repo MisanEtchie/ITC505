@@ -1,0 +1,28 @@
+.container {
+    display: grid;
+    grid-template-columns: 200px 1fr 200px; /* Assign explicit width to the nav */
+    grid-template-areas: 
+        "nav main aside";
+    height: 100%; /* Fill container height */
+}
+
+nav {
+    grid-area: nav;
+    background-color: lightblue; /* Enhance visibility */
+    padding: 15px;
+}
+
+nav ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0;
+}
+
+nav ul li a {
+    display: block; /* Make links block-level for easier clicking */
+    padding: 10px; /* Add padding for better touch interaction */
+    text-decoration: none; /* Remove underline */
+    color: darkblue; /* Specify text color */
+    background-color: white; /* Add distinct background */
+    border: 1px solid #ccc; /* Add border to each link */
+    margin: 5px 0; /* Space out links */
+}

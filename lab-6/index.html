@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interactive Color Mixer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="images/InsideBaseball.jpg" alt="Page Logo" height="50">
+        <h1>Interactive Color Mixer</h1>
+    </header>
+    <div class="container">
+        <nav>
+            Menu
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <!-- <aside class="advert left-ad">
+            <a href="https://www.walmart.com/ip/Beats-Solo3-Wireless-Headphones-Black/604599575?classType=VARIANT&athbdg=L2000&from=/search">
+                <img src="images/beatss.jpg" alt="Advertisement" width="100%">
+            </a>
+        </aside> -->
+        <main>
+            <h2>Adjust the sliders to mix your color:</h2>
+            <div id="colorDisplay" style="width:100%; height:100px; background-color: #000;"></div>
+            <label>Red: <input type="range" id="red" name="red" min="0" max="255"></label>
+            <label>Green: <input type="range" id="green" name="green" min="0" max="255"></label>
+            <label>Blue: <input type="range" id="blue" name="blue" min="0" max="255"></label>
+        </main>
+        <aside class="advert right-ad">
+            <a href="https://www.walmart.com/ip/Beats-Solo3-Wireless-Headphones-Black/604599575?classType=VARIANT&athbdg=L2000&from=/search">
+                <img src="images/beatss.jpg" alt="Advertisement" width="100%">
+            </a>
+        </aside>
+    </div>
+    <footer>
+        <p>Last updated: <span id="lastModified"></span></p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Overcoming Open Source Project Entry Barriers with a Portal for Newcomers</title>
+    <link rel="stylesheet" href="hw4style.css">
+</head>
+<body>
+
+    <!-- Main article for the paper -->
+    <article>
+        <h1>Overcoming Open Source Project Entry Barriers with a Portal for Newcomers</h1>
+        <p>Written by Igor Steinmacher, Tayana Uchoa Conte, Christoph Treude, and Marco Aurélio Gerosa.</p>
+        
+        <h2>Abstract</h2>
+        <p>Community-based Open Source Software (OSS) projects rely on contributions from distributed volunteers. Supporting newcomers is crucial for the survival and success of these projects. However, newcomers often face barriers that can lead to dropouts. This paper presents FLOSScoach, a portal designed to support newcomers in OSS projects.</p>
+        
+        <h1>INTRODUCTION</h1>
+        <p>Open Source Software (OSS) projects have risen to great prominence within the last several years [24]. Many OSS projects leverage contributions from geographically distributed volunteers and newcomers are important for their survival, long-term success, and continuity. According to Qureshi and Fang [33], it is essential to motivate, engage, and retain new developers in a project in order to promote a sustainable number of developers. Furthermore, newcomers are a source of innovation for new ideas and work procedures that the group needs [23].</p>
+        <p>However, newcomers face many difficulties when making their first contribution to a project. OSS project newcomers are usually expected to learn about the project on their own [37]. Dagenais et al. [10] compare them to explorers in a hostile environment who need to orient themselves. Thus, a major challenge for OSS projects is providing newcomer support.</p>
+        <p>Previous research related to the joining process of newcomers examined the dynamics that drive OSS contributors, mostly focusing on the motivations for becoming a member, roadmaps to becoming a core developer, or indicators of potential long-term commitment [16, 20, 38, 51, 52]. An understudied aspect of the OSS joining process is what happens during the period after a newcomer decides to participate and before their first code contribution is accepted and included in the shared repository. This period is particularly relevant to OSS projects, as many newcomers do not want to remain on the project, but only post a single contribution (e.g., a bug correction or a new feature) [32]. During this period, newcomers face barriers that can result in their decision to give up contributing. Thus, as Karl Fogel [14] states, “if a project doesn’t make a good first impression, newcomers may wait a long time before giving it a second chance.”</p>
+        <p>In our previous work [41, 43], we proposed a preliminary model to help identify and better understand the barriers faced by newcomers to OSS projects. The 58 barriers presented in the model are organized into six categories: cultural differences, newcomers’ characteristics, reception issues, newcomers’ orientation, technical hurdles, and documentation problems.</p>
+        <p>Our goal in this paper is to propose and evaluate FLOSScoach, a web portal created to support the first contributions of newcomers to OSS projects. FLOSScoach has been designed and structured to reflect the categories identified in the preliminary barriers model. Each category was mapped onto a portal section, which contains information and strategies aimed at supporting newcomers in overcoming the identified barriers. To populate the portal, we collected already-existing strategies and manually fed the portal sections. The structure and a screenshot of FLOSScoach are presented in Figure 1.</p>
+        <p>To guide our research, we defined the following three research questions:</p>
+        <ul>
+            <li>Q1. How do newcomers use the web portal to overcome the contribution barriers?</li>
+            <li>Q2. Does the use of the web portal impact newcomers’ self-efficacy?</li>
+            <li>Q3. What is this web portal’s perceived usefulness, ease of use, and likely future use?</li>
+        </ul>
+        <p>We conducted a study with students, relying on qualitative analysis of diaries, a self-efficacy questionnaire [3], and the Technology Acceptance Model (TAM) [12]. The results enabled us to evaluate FLOSScoach and improve the barriers model according to the feedback received.</p>
+        <p>Permission to make digital or hard copies of all or part of this work for personal or classroom use is granted without fee provided that copies are not made or distributed for profit or commercial advantage and that copies bear this notice and the full citation on the first page. Copyrights for components of this work owned by others than ACM must be honored. Abstracting with credit is permitted. To copy otherwise, or republish, to post on servers or to redistribute to lists, requires prior specific permission and/or a fee. Request permissions from permissions@acm.org. ICSE '16, May 14-22, 2016, Austin, TX, USA © 2016 ACM. ISBN 978-1-4503-3900-1/16/05…$15.00 DOI: http://dx.doi.org/10.1145/2884781.2884806</p>
+        
+        <h2>RELATED WORK</h2>
+        <p>The onboarding of newcomers is not an issue exclusively faced by OSS. Many studies in the literature deal with the joining process of newcomers in collective production communities, including Wikipedia [15, 49] and OSS projects [5, 19, 25, 27, 50]. Dagenais et al. [10] and Begel and Simon [4] presented studies on newcomers’ joining process focusing on closed source industry settings. Many other studies focus on newcomers onboarding to OSS projects [44].</p>
+        <p>Some studies report scripts and cases of developers successfully joining OSS projects, presenting this data as a joining process. Von Krogh et al. [25], for example, proposed a joining script for developers who want to take part in a project based on historical analysis. Nakakoji et al. [28] studied OSS projects and presented eight possible roles for the community members and structured them into a model composed of concentric layers. Although these papers deal with the evolution of members’ participation in OSS communities, they focus on newcomers after the onboarding.</p>
+        <p>Other researchers tried to understand the barriers that influence the retention of newcomers. Zhou and Mockus [52] identified the newcomers who are more likely to remain in a project in order to offer active support for them to become long-term contributors. Jensen et al. [19] analyzed whether emails sent by newcomers are quickly answered, if gender and nationality influence the kind of answer received, and if the reception of newcomers is different in user lists and developer lists. Similarly, in our previous work [45], we studied how the answers to the first emails of newcomers influenced their retention.</p>
+        <p>There are also some papers presenting tools to support newcomers’ first steps. Čubranić et al. [8] presented Hipikat, a tool that supports newcomers by building a group memory and recommending source code, mail messages, and bug reports to support newcomers. Wang and Sarma [50] presented a Tesseract extension to enable newcomers to identify bugs of interest and resources related to those bugs, and to explore the appropriate socio-technical dependencies for a bug in an interactive manner. Park and Jensen [31] showed that visualization tools support the first steps of newcomers to OSS projects, helping them to find information more quickly. Mentoring was also explored as a way to support newcomers. Malheiros et al. [27] and Canfora et al. [5] proposed different approaches to identify and recommend mentors to OSS newcomers.</p>
+        
+        <h2>FLOSScoach: A PORTAL TO SUPPORT NEWCOMERS TO OSS PROJECTS</h2>
+        <p>We developed the FLOSScoach portal based on the barriers model that we proposed previously [41]. The model comprises 58 barriers organized into six categories presented in Figure 2.</p>
+        <img src="image1.png" alt="Description of Image 1" class="responsive-img">
+        <p>In Figure 1, we show how the barriers model was mapped onto the portal sections. The mapping is also presented in the following items:</p>
+        <ul>
+            <li>
+                <strong>Newcomers’ Orientation:</strong> Newcomers often face rugged and unfamiliar landscapes when onboarding to an OSS project. They need proper orientation to find their way and correctly make their contributions. Examples of barriers under this category include difficulty finding a mentor and poor “How to contribute” documentation available. Figure 1 depicts the FLOSScoach section, which aims at addressing this category of barriers. The category was mapped to the “How to start” section, which contains a clickable step-by-step flow, a list of easy tasks (filtered tasks based on tags provided by the project), and an indication of mentors listed at openhatch.com.
+            </li>
+            <li>
+                <strong>Newcomers’ Characteristics:</strong> This category comprises the barriers related to the experience and behavior of the newcomers and the way they interact when joining a project. This category was mapped to a section called “Newcomer characteristics,” which presents a list of skills needed and expected to contribute to the project, links to tutorials provided by the community, and widgets (from openhub.net) displaying facts about the project.
+            </li>
+            <li>
+                <strong>Reception Issues:</strong> This category comprises the barriers related to the interaction that occurs between newcomers and the community. A breakdown during these social interactions can lead to demotivation, and even result in newcomers dropping out. These barriers include not receiving an answer to a message and receiving impolite answers. Solutions to address reception issues were mapped to a section called “Communication.” This section includes links to the mailing list, an embedded tool to connect to the project’s IRC channel (if available), and a set of guidelines on how to interact with the community, including a suggested message template to guide the newcomers’ first interactions. Figure 2. Barriers model proposed in [41, 42].
+            </li>
+            <li>
+                <strong>Cultural Differences:</strong> Cultural differences can result in interaction problems. Two barriers were reported in the barriers model: the need to be in contact with a real person and messages considered to be rude. While building FLOSScoach, we found that the barriers under this category were strictly related to reception issues. Thus, strategies such as the suggested message template and links to regional mailing lists (when available), which aim to help address the cultural differences, were put under the section “Communication.”
+            </li>
+            <li>
+                <strong>Documentation Problems:</strong> This category refers to the need to learn the project’s technical and social aspects in order to be able to contribute. The barriers under this category define documentation problems that have been identified as barriers to newcomers, and include: outdated documentation; unclear code comments; information overload; and lack of documentation. We created a FLOSScoach section called “Documentation” and filled it with information about the documentation made available by the project, organizing it in subsections.
+            </li>
+            <li>
+                <strong>Technical Hurdles:</strong> This category consists of the project’s technical barriers that arise when newcomers are handling the code. These barriers were placed under a single category and split into three subcategories: code/architectural hurdles, change request hurdles, and local environment setup hurdles. We mapped the information related to addressing the technical hurdles to a FLOSScoach section called “Technical issues.” The section includes an embedded mailing list archive search and links to tutorials, code search engines, code standards, and code related documentation.
+            </li>
+        </ul>
+        
+        <h2>RESEARCH SETTING</h2>
+        <p>In this section, we present details about the research setting, including the participant selection and the assignment that participants received. The study was conducted in two different iterations, and we present the details individually. Our participants were undergraduate students. Students are potential OSS project contributors, which is why there are currently several programs (e.g., Google Summer of Code, Facebook Open Academy) focusing on attracting them. The students chosen for this study had enough knowledge to fix small bugs in software projects and were motivated to contribute (since their grade depended on it). They joined a real project with real issues, and they interacted with the actual code and community.</p>
+        <img src="image2.png" alt="Description of Image 2" class="responsive-img">
+        <p>For both iterations, we first profiled the participants to verify their experience level regarding software development, OSS, and programming languages. We also captured gender and age.</p>
+
+        <p>All the participants were asked to contribute code to a given project, by fixing bugs or implementing new features according to what was already reported in the project’s issues tracker. They had one month to deliver the task. It was part of their assignment to write diaries logging their activities, issues, and everything that they did while working on the assignment in a shared document.</p>
+
+        <h3>Iteration 1</h3>
+        <p>Fourteen students attending a Software Engineering course (3rd year) at Federal University of Technology – Paraná (UTFPR) received a graded assignment. Most participants did not have any experience in the software industry (outside university). Only five of them had worked in industry, but for less than one year. Only one participant reported previous experience in contributing to OSS projects. We directed the participants to two specific OSS projects: LibreOffice and JabRef. These two projects were part of our previous studies, with a large number of participants and communities receptive to our research. Moreover, this study’s first author is a JabRef contributor.</p>
+
+        <p>We split the participants and directed them to the two different projects. In order to randomly split the students into portal (received credentials to FLOSScoach) and control (did not receive credentials to FLOSScoach), we:</p>
+        <ol>
+            <li>Matched students and projects according to their expertise in programming languages;</li>
+            <li>Ranked the students according to their previous experience in OSS and industry (in case of ties, we ranked them randomly);</li>
+            <li>Followed the ranked list (considering the project matching from step 1) to alternate between control and portal group.</li>
+        </ol>
+
+        <h3>Iteration 2</h3>
+        <p>Iteration 2 was conducted during a Software Engineering course of a Computer Science major at University of São Paulo (USP). The initial number of participants was 51. Their profile was a little different from the participants of Iteration 1. The main difference is that the participants had slightly more industry experience.</p>
+
+        <p>As we were counting on a larger number of newcomers, we prepared FLOSScoach with information from four other OSS projects: Amarok, Empathy, Vim, and Audacity. We chose projects written in C/C++ to match the participants’ language skills.</p>
+
+        <p>Following the same steps considered in Iteration 1, we split the participants by project, and into portal and control groups.</p>
+
+        <p>We would like to highlight that similar assignments had been applied to evaluate the students in previous editions of the courses in which the study was conducted. Thus, the task is part of the dynamics of the course and will continue to exist in following editions. Moreover, the grades were not related to the contribution itself, but based on the student diaries. We analyzed the process they followed, the frequency of entries, answers to feedback, persistence, and level of detail. We emphasized this to all the students before the assignment (as it had been done in the previous editions of the course). The assignment and writing diaries was mandatory, but completing the questionnaires was not. In the welcome page of the survey, there was a written notice stating that the survey was part of research, was not mandatory, and would be used in a study. The fourth author was in charge of the course in Iteration 2. No such conflict existed in Iteration 1.</p>
+        
+        <h2>DISCUSSION</h2>
+        <p>In this section, we present changes we made to the barriers model based on the development and evaluation of FLOSScoach, describe the impact of the web portal, and, based on our experience, discuss features that have the potential of helping OSS project newcomers overcome entry barriers.</p>
+
+        <h3>6.1 Updating the Barriers Model</h3>
+        <p>After developing and evaluating FLOSScoach, we updated the barriers model using the feedback from this study as input. We made the following changes:</p>
+        <ul>
+            <li>A category called communication was created to accommodate problems related to newcomers’ communication and community reception issues.</li>
+            <li>Cultural differences barriers are now included in the communication and newcomers’ behavior categories. This change was made in response to the barriers’ proximity to the mentioned categories, which we perceived during the conception of the web portal.</li>
+            <li>The technical hurdles category was dismissed, making code/architecture hurdles, change request hurdles, and local environment setup hurdles first-level categories. This rearrangement was suggested after Iteration 1 because the two-level structure for accessing such important information was confusing.</li>
+            <li>Documentation problems that crosscut other categories were accommodated into other categories, which retained “documentation” in their name. This change was based on suggestions from Iteration 1 participants, who reported existing redundancy.</li>
+        </ul>
+        <p>The resulting model and more details can be found in [40].</p>
+
+        <h3>6.2 Impact of FLOSScoach</h3>
+        <p>We could not identify any new barrier that emerged due to the use of the web portal. The few issues reported by the participants were classified as enhancement opportunities, since they were mostly related to the way FLOSScoach presented information. Thus, we observed that categorizing the portal according to the barriers model benefitted the newcomers.</p>
+        <p>By conducting this study, we could notice that offering the correct guidance or, as stated by Dagenais et al. [10], providing maps and signs brings benefit to newcomers, as they felt more confident and oriented starting from the very first contact with the project.</p>
+        <p>We understand that the web portal’s main contribution is better orienting newcomers by organizing already provided strategies and documents. This brought direct results in terms of reducing newcomers’ orientation barriers as well as documentation barriers.</p>
+        <p>We also observed that some social barriers, mainly those related to communication, previously categorized as reception issues and newcomers’ communication, were softened by reducing the need for community interaction, as reported by one participant: “I did not need to talk to them. The tool was very clear. It is very easy, very good.” – P1-02</p>
+        <p>Using the portal did not eliminate all barriers. However, we observed that these barriers were reduced since they were reported by the control group and not by the group using the web portal.</p>
+        <p>We also highlight the strong influence of technical issues. Barriers related to the technical hurdles category were recurrently reported by participants from both control and portal groups. We found that the recurrence and difficulty related to this category of barriers made the newcomers feel irritated and frustrated, which can lead to demotivation.</p>
+
+        <h3>6.3 Features for Newcomers</h3>
+        <p>Based on our work, we can identify various features that have the potential of helping OSS project newcomers overcome entry barriers. For example, in our experience, providing a clear contribution flow helps newcomers gain confidence about what to do and in what order. Aligned with this, we suggest creating a newcomer-specific page containing only the resources they need and not flood them with every possible resource, since too much information can confuse them.</p>
+        <p>The identification of tasks that are considered easy or simple for new contributors helps them find their way. Some informative tags for the issue tracker that may guide newcomers include: difficulty level, module affected, language/technology skills needed, and members who can help. Many OSS projects already triage their issues in this way, but more important than triaging is making newcomers aware.</p>
+        <p>Regarding communication, providing a message template facilitates and encourages newcomers to interact with the community and helps them send a meaningful and complete message. Moreover, in our experience, it seems important to explicitly tell newcomers that it is important to find partial answers to their questions in the mailing list archives before dropping a question to the list. We addressed this by embedding a custom search box (which enables newcomers to search the mailing list archives) in the initial page of the “Communication” web portal section.</p>
+        <p>We believe that communities and researchers can put more effort into providing ways to facilitate newcomers’ onboarding. According to our results, the points that deserve more attention are facilitating local workspace setup and providing ways to find the correct set of artifacts to work on once a task is selected.</p>
+
+        <p>Although we used data from a variety of projects, the findings are not generalizable to all projects. We are aware that each project has its singularities and that the level of support and the barriers can differ according to the project. Our strategy of considering different projects aimed to explore different ways to use the web portal and overcome barriers.</p>
+    
+        <p>Diary studies can introduce some threats to validity. First, it is impossible to ensure that participants write their diary entries in an unfiltered way. Second, diary studies follow a case-study approach. In the diary study, we aimed for in-depth understanding, rather than statistical validity. We read students’ entries consistently and frequently requested additional information or explanation, which should have counteracted any withholding.</p>
+        
+        <p>Also regarding diaries, we acknowledge that there was no way to ensure that participants from both groups received equivalent feedback on their diaries. To reduce this possible threat, the researchers visited the diaries on a daily basis, posting comments to all diaries that changed since the prior visit. Regarding the possible benefit received by students that had been assigned to use FLOSScoach, we report that even students that were in the control group and were not able to contribute could receive an excellent grade, since the process was more important than the final result. We highlight that the median grade obtained by the control group was 7.0 (on a scale 0.0 - 10.0), while the median of those from the portal group was 7.25, and we did not find a statistical difference between both means applying the Mann-Whitney test (p=0.3418).</p>
+        
+        <p>The use of students could have affected the results’ generalizability. Moreover, most of our participants were novices to software development in real settings (with no previous industry experience), and thus it is possible that some barriers they faced are not specific to OSS development. However, we highlight that students are potential contributors to OSS projects. Students may have felt that they needed to provide positive feedback in the surveys. To avoid this, we emphasized to both groups that the feedback had no bearing on their grade. Moreover, according to previous studies [18, 36], students may provide an adequate model of the professional population. Runeson [35] identified a similar trend when comparing freshman, graduate, and professional developers.</p>
+        
+        <p>Another potential threat to our results is the data subjectivity of the qualitative diary analysis. We grounded our findings in the data collected and presented excerpts to mitigate this threat.</p>
+        
+        <h2>CONCLUSION</h2>
+        <p>In this paper, we presented and evaluated FLOSScoach, a web portal to support newcomers. We found that the web portal improved newcomers’ experiences of the contribution process, serving as a compass during the contribution journey. This finding was evident both in the qualitative analysis of contribution diaries and in the self-efficacy results.</p>
+        
+        <p>Newcomers who used the web portal felt more confident deciding which steps they needed to take to achieve their goals. The participants highlighted the contribution (step-by-step) flow and the helpful organization of information as FLOSScoach’s main beneficial features. However, we could not identify any significant improvement in supporting newcomers to overcome technical barriers. The study’s practical application of the barriers model led to observations that resulted in a new version of the model, which included some rearrangements.</p>
+        
+        <p>The results of our work point to a set of features that can help OSS project newcomers overcome entry barriers, including triaged lists of tasks, a clear contribution flow linked to useful documentation, and a message template to support newcomers’ first interaction in mailing lists.</p>
+        
+        <p>Currently, we are working on a new, more collaborative version of FLOSScoach, which will enable creating and maintaining entries for other projects. We are also working on automating the identification, extraction, summarization, generation, and presentation of documentation that is relevant to newcomers in OSS projects. Using a variety of existing and novel natural language processing techniques, we propose to automatically parse documentation that is available for an OSS project from different sources, such as the official documentation on the projects’ website, issue trackers, forums, Stack Overflow, or blogs.</p>
+        
+        <h2>ACKNOWLEDGEMENTS</h2>
+        <p>The authors thank the students who participated in this study. We also thank Pernille Bjørn for suggesting the use of diary study and David Redmiles for the guidance provided during Igor’s PhD. We thank CNPq (process 477831/2013), CAPES, Fundação Araucária, FAPESP (processes 2015/07399-1 and 2014/21899-4), NAPSoL, NAWEB and FAPEAM for their financial support. Marco A. Gerosa receives an individual grant from CNPq.</p>
+           
+    </article>
+
+    
+    <article>
+        <h2>Addendum</h2>
+        <p>For this project, I aimed to make the essay more engaging and visually appealing using a touch of fun with CSS. Below is a list of the changes I made and the reasoning behind each choice:</p>
+        
+        <ul>
+            <li><strong>&lt;h1&gt;</strong>: The big title! I made it bold and bright by using a larger font size (2.8em) and a fun tomato red color (#ff6347). The serif font (Georgia) gives it a formal yet approachable vibe.</li>
+    
+            <li><strong>&lt;h2&gt;</strong>: These section headers stand out with a softer coral color (#ff7f50) and uppercase styling for emphasis. The font size (2.2em) and letter-spacing make it feel more spaced out and fun.</li>
+    
+            <li><strong>&lt;h3&gt;</strong>: Subheadings are set in a calm blue (#4682b4) to help guide the reader without being too bold. The size is smaller (1.7em), giving a nice contrast while keeping everything easy to follow.</li>
+    
+            <li><strong>&lt;p&gt;</strong>: I used a slightly larger font size (17px) for the body text to ensure readability. The line spacing and margins between paragraphs create a clean, open layout that’s easy on the eyes.</li>
+    
+            <li><strong>Font Choices</strong>: The sans-serif font (Arial) for body text was chosen for clarity, while the serif (Georgia) in headings provides contrast and helps structure the content in a way that feels polished.</li>
+    
+            <li><strong>Colors</strong>: I opted for a fresh background color (#f4f7fa) and a soft dark text color (#333) for readability. The playful accent colors (tomato, coral, blue) add some personality without overwhelming the reader.</li>
+    
+            <li><strong>Margins and Padding</strong>: Generous margins and padding around elements make the layout feel spacious and organized. This helps the reader flow through the content smoothly without feeling cluttered.</li>
+    
+            <li><strong>HTML Abuse</strong>: In my earlier version, I incorrectly used <code>&lt;h2&gt;</code> for the main title. I fixed this by using <code>&lt;h1&gt;</code> as it properly represents the highest level of heading.</li>
+        </ul>
+    </article>
+    
+
+
+<footer>
+    <p>Last updated: 
+        <span id="lastModified"></span>
+    </p>
+</footer>
+<script type="text/javascript">
+     var x = document.lastModified;
+     document.getElementById('lastModified').textContent = x;
+</script>
+    
+</body>
+</html>
+
+    
+
